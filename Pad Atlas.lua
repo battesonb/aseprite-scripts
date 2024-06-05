@@ -15,7 +15,7 @@ local dialog = Dialog("Atlas padding")
 dialog:number { id="tile_x", label="Horizontal tile size", text="8", decimals=0 }
 dialog:number { id="tile_y", label="Vertical tile size", text="8", decimals=0 }
 dialog:slider { id="padding_x", label="Horizontal padding", value=1, min=0, max=20 }
-dialog:slider { id="padding_y", label="Vertical padding", value=0, min=0, max=20 }
+dialog:slider { id="padding_y", label="Vertical padding", value=1, min=0, max=20 }
 dialog:button { text="&Close" }
 
 local info = function()
@@ -76,6 +76,6 @@ local pad = function()
 end
 
 dialog:button { id="info", text="&Info", onclick=info }
-dialog:button { id="info", text="&Run", focus=true, onclick=pad }
+dialog:button { id="run", text="&Run", focus=true, onclick=pad }
 
 dialog:show { wait=false }
